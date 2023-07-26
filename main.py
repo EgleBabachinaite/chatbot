@@ -11,7 +11,7 @@ class ChatbotWindow(QMainWindow):
 
         self.chatbot = Chatbot()
 
-        self.setMinimumSize(700, 500)
+        self.setMinimumSize(600, 500)
 
         # Add chat area widget
         self.chat_area = QTextEdit(self)
@@ -45,4 +45,5 @@ class ChatbotWindow(QMainWindow):
 
 app = QApplication(sys.argv)
 main_window = ChatbotWindow()
+main_window.setWindowTitle('Sprinkle Magic')
 sys.exit(app.exec())

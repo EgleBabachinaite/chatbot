@@ -1,9 +1,15 @@
 import openai
 
 
+def reading_key():
+    with open("api_key", "r") as file:
+        content = file.read()
+        return content
+
+
 class Chatbot:
     def __init__(self):
-        openai.api_key = "your-key"
+        openai.api_key = reading_key()
 
     def get_response(self, user_input):
         response = openai.Completion.create(
